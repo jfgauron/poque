@@ -1,0 +1,17 @@
+name: Hack github
+
+on:
+  pull_request:
+
+jobs:
+  shell:
+    name: Shell
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository to the GitHub Actions runner
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Say Hello
+        run: echo "Hello World!"
